@@ -13,5 +13,8 @@ CHIP Bit {
     OUT out;
 
     PARTS:
-    //// Replace this comment with your code.
+    DFF(in=in, out=processedInput);
+    Mux(a=someValue, b=processedInput, sel=load, out=out);
+    // How do I set a=out and what should be the first value then?
+    // Should I take a look at the HDl survival guide? Probably.
 }
